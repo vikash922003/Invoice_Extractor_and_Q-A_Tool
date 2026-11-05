@@ -1,0 +1,19 @@
+{
+  "name": "invoice-intelligence-suite",
+  "version": "1.0.0",
+  "description": "Production-Quality Invoice Extractor & Q&A Tool (MERN + Gemini)",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:backend": "npm --prefix backend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "test": "npm --prefix backend test",
+    "evaluate:extraction": "npm --prefix backend run evaluate:extraction"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

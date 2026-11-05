@@ -1,0 +1,490 @@
+{
+  "timestamp": "2026-11-05T18:25:39.894Z",
+  "total_invoices_tested": 8,
+  "overall_field_accuracy": 100,
+  "fields": {
+    "vendor_name": {
+      "matched": 8,
+      "total": 8,
+      "accuracy_percentage": 100
+    },
+    "invoice_number": {
+      "matched": 8,
+      "total": 8,
+      "accuracy_percentage": 100
+    },
+    "invoice_date": {
+      "matched": 8,
+      "total": 8,
+      "accuracy_percentage": 100
+    },
+    "currency": {
+      "matched": 8,
+      "total": 8,
+      "accuracy_percentage": 100
+    },
+    "subtotal": {
+      "matched": 8,
+      "total": 8,
+      "accuracy_percentage": 100
+    },
+    "tax": {
+      "matched": 8,
+      "total": 8,
+      "accuracy_percentage": 100
+    },
+    "total": {
+      "matched": 8,
+      "total": 8,
+      "accuracy_percentage": 100
+    },
+    "line_items": {
+      "matched": 8,
+      "total": 8,
+      "accuracy_percentage": 100
+    },
+    "validation_status": {
+      "matched": 8,
+      "total": 8,
+      "accuracy_percentage": 100
+    }
+  },
+  "invoices": [
+    {
+      "filename": "invoice_01_aws_cloud.pdf",
+      "extracted": {
+        "vendor_name": "Amazon Web Services",
+        "invoice_number": "AWS-2024-90812",
+        "invoice_date": "2024-08-15",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "EC2 Compute Instances",
+            "quantity": 3,
+            "unit_price": 100,
+            "amount": 300
+          },
+          {
+            "description": "S3 Standard Storage",
+            "quantity": 1,
+            "unit_price": 150,
+            "amount": 150
+          }
+        ],
+        "subtotal": 450,
+        "tax": 45,
+        "total": 495
+      },
+      "expected": {
+        "filename": "invoice_01_aws_cloud.pdf",
+        "vendor_name": "Amazon Web Services",
+        "invoice_number": "AWS-2024-90812",
+        "invoice_date": "2024-08-15",
+        "currency": "USD",
+        "subtotal": 450,
+        "tax": 45,
+        "total": 495,
+        "expected_validation_status": "PASS",
+        "line_items": [
+          {
+            "description": "EC2 Compute Instances",
+            "quantity": 3,
+            "unit_price": 100,
+            "amount": 300
+          },
+          {
+            "description": "S3 Standard Storage",
+            "quantity": 1,
+            "unit_price": 150,
+            "amount": 150
+          }
+        ]
+      },
+      "field_matches": {
+        "vendor_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true,
+        "validation_status": true
+      },
+      "discrepancies": [],
+      "validation_passed": true,
+      "expected_validation_passed": true
+    },
+    {
+      "filename": "invoice_02_google_workspace.pdf",
+      "extracted": {
+        "vendor_name": "Google LLC",
+        "invoice_number": "GOOG-881290",
+        "invoice_date": "2024-08-20",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Google Workspace Enterprise Plus",
+            "quantity": 8,
+            "unit_price": 30,
+            "amount": 240
+          }
+        ],
+        "subtotal": 240,
+        "tax": 24,
+        "total": 264
+      },
+      "expected": {
+        "filename": "invoice_02_google_workspace.pdf",
+        "vendor_name": "Google LLC",
+        "invoice_number": "GOOG-881290",
+        "invoice_date": "2024-08-20",
+        "currency": "USD",
+        "subtotal": 240,
+        "tax": 24,
+        "total": 264,
+        "expected_validation_status": "PASS",
+        "line_items": [
+          {
+            "description": "Google Workspace Enterprise Plus",
+            "quantity": 8,
+            "unit_price": 30,
+            "amount": 240
+          }
+        ]
+      },
+      "field_matches": {
+        "vendor_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true,
+        "validation_status": true
+      },
+      "discrepancies": [],
+      "validation_passed": true,
+      "expected_validation_passed": true
+    },
+    {
+      "filename": "invoice_03_tech_solutions_inr.pdf",
+      "extracted": {
+        "vendor_name": "Tech Solutions India Pvt Ltd",
+        "invoice_number": "TSI-2024-041",
+        "invoice_date": "2024-09-01",
+        "currency": "INR",
+        "line_items": [
+          {
+            "description": "IT Support and Network Maintenance",
+            "quantity": 1,
+            "unit_price": 10000,
+            "amount": 10000
+          }
+        ],
+        "subtotal": 10000,
+        "tax": 1800,
+        "total": 11800
+      },
+      "expected": {
+        "filename": "invoice_03_tech_solutions_inr.pdf",
+        "vendor_name": "Tech Solutions India Pvt Ltd",
+        "invoice_number": "TSI-2024-041",
+        "invoice_date": "2024-09-01",
+        "currency": "INR",
+        "subtotal": 10000,
+        "tax": 1800,
+        "total": 11800,
+        "expected_validation_status": "PASS",
+        "line_items": [
+          {
+            "description": "IT Support and Network Maintenance",
+            "quantity": 1,
+            "unit_price": 10000,
+            "amount": 10000
+          }
+        ]
+      },
+      "field_matches": {
+        "vendor_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true,
+        "validation_status": true
+      },
+      "discrepancies": [],
+      "validation_passed": true,
+      "expected_validation_passed": true
+    },
+    {
+      "filename": "invoice_04_euro_consulting.pdf",
+      "extracted": {
+        "vendor_name": "EuroConsult GmbH",
+        "invoice_number": "EC-77621",
+        "invoice_date": "2024-07-22",
+        "currency": "EUR",
+        "line_items": [
+          {
+            "description": "Security Audit & Compliance Consulting",
+            "quantity": 10,
+            "unit_price": 150,
+            "amount": 1500
+          }
+        ],
+        "subtotal": 1500,
+        "tax": 300,
+        "total": 1800
+      },
+      "expected": {
+        "filename": "invoice_04_euro_consulting.pdf",
+        "vendor_name": "EuroConsult GmbH",
+        "invoice_number": "EC-77621",
+        "invoice_date": "2024-07-22",
+        "currency": "EUR",
+        "subtotal": 1500,
+        "tax": 300,
+        "total": 1800,
+        "expected_validation_status": "PASS",
+        "line_items": [
+          {
+            "description": "Security Audit & Compliance Consulting",
+            "quantity": 10,
+            "unit_price": 150,
+            "amount": 1500
+          }
+        ]
+      },
+      "field_matches": {
+        "vendor_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true,
+        "validation_status": true
+      },
+      "discrepancies": [],
+      "validation_passed": true,
+      "expected_validation_passed": true
+    },
+    {
+      "filename": "invoice_05_swiggy_meal.png",
+      "extracted": {
+        "vendor_name": "Swiggy Corporate Catering",
+        "invoice_number": "SWIG-99812",
+        "invoice_date": "2024-08-10",
+        "currency": "INR",
+        "line_items": [
+          {
+            "description": "Team Luncheon Pack",
+            "quantity": 10,
+            "unit_price": 250,
+            "amount": 2500
+          }
+        ],
+        "subtotal": 2500,
+        "tax": 125,
+        "total": 2625
+      },
+      "expected": {
+        "filename": "invoice_05_swiggy_meal.png",
+        "vendor_name": "Swiggy Corporate Catering",
+        "invoice_number": "SWIG-99812",
+        "invoice_date": "2024-08-10",
+        "currency": "INR",
+        "subtotal": 2500,
+        "tax": 125,
+        "total": 2625,
+        "expected_validation_status": "PASS",
+        "line_items": [
+          {
+            "description": "Team Luncheon Pack",
+            "quantity": 10,
+            "unit_price": 250,
+            "amount": 2500
+          }
+        ]
+      },
+      "field_matches": {
+        "vendor_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true,
+        "validation_status": true
+      },
+      "discrepancies": [],
+      "validation_passed": true,
+      "expected_validation_passed": true
+    },
+    {
+      "filename": "invoice_06_adobe_creative.pdf",
+      "extracted": {
+        "vendor_name": "Adobe Systems Inc",
+        "invoice_number": "ADBE-341908",
+        "invoice_date": "2024-08-05",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Adobe Creative Cloud Annual Subscription",
+            "quantity": 1,
+            "unit_price": 600,
+            "amount": 600
+          }
+        ],
+        "subtotal": 600,
+        "tax": 0,
+        "total": 600
+      },
+      "expected": {
+        "filename": "invoice_06_adobe_creative.pdf",
+        "vendor_name": "Adobe Systems Inc",
+        "invoice_number": "ADBE-341908",
+        "invoice_date": "2024-08-05",
+        "currency": "USD",
+        "subtotal": 600,
+        "tax": 0,
+        "total": 600,
+        "expected_validation_status": "PASS",
+        "line_items": [
+          {
+            "description": "Adobe Creative Cloud Annual Subscription",
+            "quantity": 1,
+            "unit_price": 600,
+            "amount": 600
+          }
+        ]
+      },
+      "field_matches": {
+        "vendor_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true,
+        "validation_status": true
+      },
+      "discrepancies": [],
+      "validation_passed": true,
+      "expected_validation_passed": true
+    },
+    {
+      "filename": "invoice_07_hardware_supply.pdf",
+      "extracted": {
+        "vendor_name": "Vertex Hardware Supply",
+        "invoice_number": "VTX-1029",
+        "invoice_date": "2024-09-12",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Dell 27-inch 4K Monitors",
+            "quantity": 4,
+            "unit_price": 300,
+            "amount": 1200
+          }
+        ],
+        "subtotal": 1200,
+        "tax": 120,
+        "total": 1320
+      },
+      "expected": {
+        "filename": "invoice_07_hardware_supply.pdf",
+        "vendor_name": "Vertex Hardware Supply",
+        "invoice_number": "VTX-1029",
+        "invoice_date": "2024-09-12",
+        "currency": "USD",
+        "subtotal": 1200,
+        "tax": 120,
+        "total": 1320,
+        "expected_validation_status": "PASS",
+        "line_items": [
+          {
+            "description": "Dell 27-inch 4K Monitors",
+            "quantity": 4,
+            "unit_price": 300,
+            "amount": 1200
+          }
+        ]
+      },
+      "field_matches": {
+        "vendor_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true,
+        "validation_status": true
+      },
+      "discrepancies": [],
+      "validation_passed": true,
+      "expected_validation_passed": true
+    },
+    {
+      "filename": "invoice_08_faulty_math.pdf",
+      "extracted": {
+        "vendor_name": "Faulty Ledger Corp",
+        "invoice_number": "FLT-FAIL-01",
+        "invoice_date": "2024-09-15",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Faulty Billing Service (Subtotal 500 + Tax 50 != Total 700)",
+            "quantity": 1,
+            "unit_price": 500,
+            "amount": 500
+          }
+        ],
+        "subtotal": 500,
+        "tax": 50,
+        "total": 700
+      },
+      "expected": {
+        "filename": "invoice_08_faulty_math.pdf",
+        "vendor_name": "Faulty Ledger Corp",
+        "invoice_number": "FLT-FAIL-01",
+        "invoice_date": "2024-09-15",
+        "currency": "USD",
+        "subtotal": 500,
+        "tax": 50,
+        "total": 700,
+        "expected_validation_status": "FAIL",
+        "line_items": [
+          {
+            "description": "Faulty Billing Service (Subtotal 500 + Tax 50 != Total 700)",
+            "quantity": 1,
+            "unit_price": 500,
+            "amount": 500
+          }
+        ]
+      },
+      "field_matches": {
+        "vendor_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true,
+        "validation_status": true
+      },
+      "discrepancies": [],
+      "validation_passed": false,
+      "expected_validation_passed": false
+    }
+  ]
+}
